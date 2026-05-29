@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist-electron/
+out/
+*.log
+.env
+.DS_Store
+
+# Large third-party research PDFs — app links to them on arXiv, no need to ship
+papers/*.pdf
+python/.venv/
+__pycache__/
+*.pyc

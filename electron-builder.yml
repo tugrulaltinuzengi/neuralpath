@@ -1,0 +1,30 @@
+appId: com.neuralpath.app
+productName: NeuralPath
+directories:
+  output: dist
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: assets/icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: assets/icon.ico
+  uninstallerIcon: assets/icon.ico
+  installerHeaderIcon: assets/icon.ico
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+files:
+  - dist/**/*
+  - electron/**/*
+  - assets/**/*
+  - node_modules/**/*
+  - package.json
+  # electron/main.js imports ../src/curriculum/index.js at runtime in the
+  # main process. Vite only bundles the renderer, so this file must be
+  # shipped as-is or the packaged app crashes with ERR_MODULE_NOT_FOUND.
+  - src/curriculum/**/*
+extraResources:
+  - from: python/
+    to: python/
