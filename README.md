@@ -92,4 +92,6 @@ _Dashboard, Lesson, Quiz, Project, Progress, and Portfolio screenshots go here._
 
 ## License
 
-MIT
+MIT, see [`LICENSE`](LICENSE).
+
+Note: the Anthropic API key you enter in onboarding is stored in plain text in the app's per-user `config.json` and local database. Use a key with a spend limit, and do not share that folder.
